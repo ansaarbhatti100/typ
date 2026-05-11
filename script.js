@@ -24,8 +24,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Newsletter Form Submission (Mockup)
-const newsletterBtn = document.querySelector('.newsletter button');
-const newsletterInput = document.querySelector('.newsletter input');
+const newsletterBtn = document.querySelector('.newsletter-form button');
+const newsletterInput = document.querySelector('.newsletter-form input');
 
 if (newsletterBtn) {
     newsletterBtn.addEventListener('click', (e) => {
@@ -52,5 +52,52 @@ document.addEventListener('DOMContentLoaded', () => {
             heroText.style.opacity = '1';
             heroText.style.transform = 'translateY(0)';
         }, 300);
+    }
+
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('mobile-menu');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+            
+            // Toggle icon
+            const icon = menuToggle.querySelector('i');
+            if (menuToggle.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close menu when clicking a link
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Close menu when clicking outside (on the overlay)
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                navMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                document.body.style.overflow = 'auto';
+            }
+        });
     }
 });
