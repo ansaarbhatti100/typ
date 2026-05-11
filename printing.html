@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printing & Vinyl Technologies | Bays Sports</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-hero { height: 350px; background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1551021464-909244675797?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; color: #fff; text-align: center; }
+        .print-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin: 80px 0; }
+        .print-card { padding: 40px; background: #fff; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; }
+        .print-card:hover { transform: translateY(-10px); background: var(--secondary-color); color: #fff; }
+        .print-card i { font-size: 50px; color: var(--primary-color); margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo"><a href="index.html" class="logo-text">BAYS <span>SPORTS</span></a></div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>PRINTING <span>TECHNOLOGIES</span></h1>
+            <p>High-Impact Branding with Lasting Durability.</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="print-grid">
+            <div class="print-card">
+                <i class="fas fa-layer-group"></i>
+                <h3>Screen Printing</h3>
+                <p>Classic high-opacity ink printing for large volume orders of T-shirts and Hoodies.</p>
+            </div>
+            <div class="print-card">
+                <i class="fas fa-fire"></i>
+                <h3>Heat Transfer Vinyl</h3>
+                <p>Perfect for individual names and numbers on jerseys. Extremely durable and precise.</p>
+            </div>
+            <div class="print-card">
+                <i class="fas fa-tint"></i>
+                <h3>Sublimation</h3>
+                <p>Permanent, full-color heat fusion for 100% custom jerseys. Design will never fade or crack.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer" style="background:#000; color:#fff; padding: 40px 0; text-align:center;">
+        <div class="container"><p>&copy; 2026 Bays Sports. All rights reserved.</p></div>
+    </footer>
+</body>
+</html>

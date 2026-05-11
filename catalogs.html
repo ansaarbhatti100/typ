@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalogs | Bays Sports</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-hero { height: 400px; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1544441893-675973eebb39?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; color: #fff; text-align: center; }
+        .page-hero h1 { font-size: 50px; text-transform: uppercase; }
+        .content-section { padding: 80px 0; }
+        .catalog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+        .catalog-card { background: #fff; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: all 0.3s ease; }
+        .catalog-card:hover { transform: scale(1.05); }
+        .catalog-img { height: 200px; background: #eee; display: flex; align-items: center; justify-content: center; font-size: 50px; color: #ccc; }
+        .catalog-info { padding: 25px; text-align: center; }
+        .download-btn { display: inline-block; padding: 10px 25px; background: var(--primary-color); color: #fff; border-radius: 5px; margin-top: 15px; font-weight: 700; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo"><a href="index.html" class="logo-text">BAYS <span>SPORTS</span></a></div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>PRODUCT <span>CATALOGS</span></h1>
+            <p>Explore our extensive range of high-performance gear.</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="section-title"><h2>Download Our Latest Collections</h2></div>
+            
+            <div class="catalog-grid">
+                <div class="catalog-card">
+                    <div class="catalog-img"><i class="fas fa-tshirt"></i></div>
+                    <div class="catalog-info">
+                        <h3>Teamwear Collection</h3>
+                        <p>Soccer, Basketball, and Volleyball uniforms.</p>
+                        <a href="#" class="download-btn"><i class="fas fa-download"></i> PDF Catalog</a>
+                    </div>
+                </div>
+                <div class="catalog-card">
+                    <div class="catalog-img"><i class="fas fa-mitten"></i></div>
+                    <div class="catalog-info">
+                        <h3>Gloves & Protection</h3>
+                        <p>Elite Football, Golf, and Batting gloves.</p>
+                        <a href="#" class="download-btn"><i class="fas fa-download"></i> PDF Catalog</a>
+                    </div>
+                </div>
+                <div class="catalog-card">
+                    <div class="catalog-img"><i class="fas fa-running"></i></div>
+                    <div class="catalog-info">
+                        <h3>Fitness & Activewear</h3>
+                        <p>Leggings, Hoodies, and Compression gear.</p>
+                        <a href="#" class="download-btn"><i class="fas fa-download"></i> PDF Catalog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer" style="background:#000; color:#fff; padding: 40px 0; text-align:center;">
+        <div class="container"><p>&copy; 2026 Bays Sports. All rights reserved.</p></div>
+    </footer>
+</body>
+</html>
